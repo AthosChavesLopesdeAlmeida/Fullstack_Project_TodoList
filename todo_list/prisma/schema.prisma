@@ -28,5 +28,5 @@ model Task {
   completed Boolean @default(false)
   createdAt DateTime @default(now())
   userId String
-  user User @relation(fields: [userId], references: [id])
+  user User @relation(fields: [userId], references: [id], onDelete: Cascade)
 }
